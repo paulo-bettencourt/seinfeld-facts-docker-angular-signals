@@ -6,7 +6,7 @@ This is a webapp with random facts about the sitcom Seinfeld.
 
 ## Technologies used
 
-This webapp was created with
+This webapp was created with:
 
 - Angular (FE) with the most up-to-date Signals state management system and standalone APIs.
 - Docker (containerized image of the Angular's webapp)
@@ -18,6 +18,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:3000/`. The appli
 Run `docker build -t seinfeld-facts` to create the containerized image of the app in Docker.
 
 Run `docker run -p 4200:4200 seinfeld-facts`to set the image on Docker.
+
+## Screenshots
 
 ## Code scaffolding
 

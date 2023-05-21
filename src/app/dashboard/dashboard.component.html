@@ -1,2 +1,5 @@
 <h2>{{facts()[randomNumber()]}}</h2>
 <input type="button" value="Give me a new fact" (click)="factRandomizer()">
+<hr>
+<input type="text" name="Enter new fact" id="" #inputNewFact>
+<input type="button" value="Submit" (click)="addNewFact()">
