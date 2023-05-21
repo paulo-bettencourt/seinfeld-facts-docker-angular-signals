@@ -1,15 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { Component, DoCheck, effect, ElementRef, signal, ViewChild, WritableSignal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 
 import { factsAboutSeinfeld } from './quotes';
 
+
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-      imports: [CommonModule, MatIconModule, MatButtonModule, MatInputModule],
+  imports: [CommonModule, MatIconModule, MatButtonModule, MatInputModule, MatFormFieldModule],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
 })
@@ -20,6 +22,7 @@ export class DashboardComponent implements DoCheck {
   randomNumber: WritableSignal<number> = signal(this.mathRandomNumber);
   @ViewChild('inputNewFact') inputFact!: ElementRef;
   isAddTrivia: boolean = false;
+  isTriviaAdded: boolean = false;
 
   constructor() {
     effect(() => {
@@ -35,10 +38,19 @@ export class DashboardComponent implements DoCheck {
     this.isAddTrivia = !this.isAddTrivia;
   }
 
+  toggleSucessMessage() {
+    this.isTriviaAdded = !this.isTriviaAdded;
+  }
+
   addNewFact() {
     const newFact = this.inputFact.nativeElement.value as string;
     this.facts.mutate((value) => value.push(newFact));
     this.numberOfFacts.update(value => value + 1);
+    this.toggleSucessMessage();
+    setTimeout(() => {
+      this.addTrivia();
+      this.toggleSucessMessage();
+    }, 1500)
   }
 
   factRandomizer() {

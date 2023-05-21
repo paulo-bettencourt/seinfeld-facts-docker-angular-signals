@@ -26,7 +26,17 @@ button {
   margin-top: 5%;
 }
 
+mat-form-field,
 .example-full-width,
 button {
   width:100%
+}
+
+#button-trivia {
+  margin-bottom: 16px;
+}
+
+.mat-flat-button.mat-warn, .mat-raised-button.mat-warn, .mat-fab.mat-warn, .mat-mini-fab.mat-warn {
+  background-color: #cc2933;
+  color: white;
 }
