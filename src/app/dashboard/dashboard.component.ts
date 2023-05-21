@@ -19,6 +19,7 @@ export class DashboardComponent implements DoCheck {
   mathRandomNumber: number = 0;
   randomNumber: WritableSignal<number> = signal(this.mathRandomNumber);
   @ViewChild('inputNewFact') inputFact!: ElementRef;
+  isAddTrivia: boolean = false;
 
   constructor() {
     effect(() => {
@@ -30,8 +31,8 @@ export class DashboardComponent implements DoCheck {
     this.mathRandomNumber = Math.round(Math.random() * this.numberOfFacts());
   }
 
-  factRandomizer() {
-    this.randomNumber.set(this.mathRandomNumber);
+  addTrivia(): void {
+    this.isAddTrivia = !this.isAddTrivia;
   }
 
   addNewFact() {
@@ -39,4 +40,10 @@ export class DashboardComponent implements DoCheck {
     this.facts.mutate((value) => value.push(newFact));
     this.numberOfFacts.update(value => value + 1);
   }
+
+  factRandomizer() {
+    this.randomNumber.set(this.mathRandomNumber);
+  }
+
+
 }
