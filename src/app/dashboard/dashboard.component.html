@@ -1,5 +1,29 @@
-<h2>{{facts()[randomNumber()]}}</h2>
-<input type="button" value="Give me a new fact" (click)="factRandomizer()">
-<hr>
-<input type="text" name="Enter new fact" id="" #inputNewFact>
-<input type="button" value="Submit" (click)="addNewFact()">
+<div class="container">
+  <img src="../assets/seinfeld-logo-png-transparent.png" alt="Seinfeld Sitcom logo">
+  <h2>{{ facts()[randomNumber()] }}</h2>
+  <button mat-raised-button color="warn" (click)="factRandomizer()">
+    Give me a new Seinfeld fact
+  </button>
+  <hr />
+
+  <div class="form-container">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Message</mat-label>
+        <input
+          matInput
+          #inputNewFact
+          maxlength="256"
+          placeholder="Ex. I need help with..."
+        />
+        <mat-hint align="start"
+          ><strong>Don't disclose personal info</strong>
+        </mat-hint>
+        <mat-hint align="end">{{ inputNewFact.value.length }} / 256</mat-hint>
+      </mat-form-field>
+      <button mat-stroked-button color="warn" (click)="addNewFact()">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>

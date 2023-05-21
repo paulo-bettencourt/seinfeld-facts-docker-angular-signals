@@ -1,12 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component, DoCheck, effect, ElementRef, signal, ViewChild, WritableSignal } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 
 import { factsAboutSeinfeld } from './quotes';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatIconModule, MatButtonModule, MatInputModule],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
 })
