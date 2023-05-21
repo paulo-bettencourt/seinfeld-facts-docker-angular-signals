@@ -2,11 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
 
-This web application is a treasure trove of intriguing and entertaining facts dedicated to the beloved sitcom Seinfeld. 
-
-Whether you're a die-hard fan or just starting your journey into the Seinfeld universe, this web app has something for everyone. 
-
-Delve into the vast collection of random facts that cover various aspects of the show, including behind-the-scenes trivia, memorable episodes, iconic catchphrases, and fascinating details about the cast and crew. 
+This web application is a treasure trove of intriguing and entertaining facts dedicated to the beloved sitcom Seinfeld. Whether you're a die-hard fan or just starting your journey into the Seinfeld universe, this web app has something for everyone. Explore the rich history of Seinfeld and discover hidden gems that add depth and appreciation to your viewing experience.
 
 ## Technologies used
 
