@@ -1,10 +1,23 @@
-# SeinfeldFactsDockerAngularSignals
+# Seinfeld Facts
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+
+This is a webapp with random facts about the sitcom Seinfeld.
+
+## Technologies used
+
+This webapp was created with
+
+- Angular (FE) with the most up-to-date Signals state management system and standalone APIs.
+- Docker (containerized image of the Angular's webapp)
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:3000/`. The application will automatically reload if you change any of the source files.
+
+Run `docker build -t seinfeld-facts` to create the containerized image of the app in Docker.
+
+Run `docker run -p 4200:4200 seinfeld-facts`to set the image on Docker.
 
 ## Code scaffolding
 
