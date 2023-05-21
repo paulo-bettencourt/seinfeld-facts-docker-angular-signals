@@ -19,10 +19,10 @@
             maxlength="256"
             placeholder="“Hello, Newman.”"
           />
-          <mat-hint align="start"
+          <mat-hint
             ><strong>"That's gold, Jerry! Gold!"</strong>
           </mat-hint>
-          <mat-hint align="end">{{ inputNewFact.value.length }} / 256</mat-hint>
+          <mat-hint>{{ inputNewFact.value.length }} / 256</mat-hint>
         </mat-form-field>
         <button mat-stroked-button color="warn" (click)="addNewFact()">Add Fact</button>
       </form>
