@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, signal, ViewChild, WritableSignal } from '@angular/core';
+import { Component, DoCheck, ElementRef, signal, ViewChild, WritableSignal } from '@angular/core';
 
 import { factsAboutSeinfeld } from './quotes';
 
@@ -10,16 +10,19 @@ import { factsAboutSeinfeld } from './quotes';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
 })
-export class DashboardComponent {
+export class DashboardComponent implements DoCheck {
   facts = signal<string[]>(factsAboutSeinfeld);
-  numberOfFacts = signal<number>(9);
-  randomNumber: WritableSignal<number> = signal(0);
+  numberOfFacts = signal<number>(factsAboutSeinfeld.length - 1);
+  mathRandomNumber: number = 0;
+  randomNumber: WritableSignal<number> = signal(this.mathRandomNumber);
   @ViewChild('inputNewFact') inputFact!: ElementRef;
 
-  constructor() {}
+  ngDoCheck(): void {
+    this.mathRandomNumber = Math.round(Math.random() * this.numberOfFacts());
+  }
 
   factRandomizer() {
-    this.randomNumber.set(Math.round(Math.random() * this.numberOfFacts()));
+    this.randomNumber.set(this.mathRandomNumber);
     console.log(this.randomNumber());
   }
 
