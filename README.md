@@ -30,7 +30,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 To create a containerized image of the app in Docker, execute the following command:
 
-`docker build -t seinfeld-facts`
+`docker build -t seinfeld-facts .`
 
 This command will build the Docker image with the tag "seinfeld-facts" based on the Dockerfile in the current directory.
 
