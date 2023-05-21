@@ -1,8 +1,12 @@
-# Seinfeld Facts
+# Seinfeld Trivia
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
 
-This web application is a treasure trove of intriguing and entertaining facts dedicated to the beloved sitcom Seinfeld. Whether you're a die-hard fan or just starting your journey into the Seinfeld universe, this web app has something for everyone. Delve into the vast collection of random facts that cover various aspects of the show, including behind-the-scenes trivia, memorable episodes, iconic catchphrases, and fascinating details about the cast and crew. Explore the rich history of Seinfeld and discover hidden gems that add depth and appreciation to your viewing experience. With each refresh, you'll uncover a new factoid, keeping the excitement alive and the Seinfeld nostalgia flowing. Get ready to immerse yourself in the world of Jerry, George, Elaine, Kramer, and their quirky adventures through this captivating web app filled with delightful Seinfeld trivia.
+This web application is a treasure trove of intriguing and entertaining facts dedicated to the beloved sitcom Seinfeld. 
+
+Whether you're a die-hard fan or just starting your journey into the Seinfeld universe, this web app has something for everyone. 
+
+Delve into the vast collection of random facts that cover various aspects of the show, including behind-the-scenes trivia, memorable episodes, iconic catchphrases, and fascinating details about the cast and crew. 
 
 ## Technologies used
 
