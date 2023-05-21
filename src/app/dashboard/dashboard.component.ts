@@ -9,7 +9,7 @@ import { factsAboutSeinfeld } from './quotes';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule, MatIconModule, MatButtonModule, MatInputModule],
+      imports: [CommonModule, MatIconModule, MatButtonModule, MatInputModule],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
 })
