@@ -1,10 +1,20 @@
-# syntax=docker/dockerfile:1
+# Stage 1: Build the Angular app
+FROM node:18-alpine AS builder
 
-FROM node:18-alpine
 WORKDIR /app
-COPY package*.json ./
-RUN npm install --legacy-peer-deps
+
 COPY . .
+
+RUN npm install --legacy-peer-deps
 RUN npm run build
-EXPOSE 4200
-CMD ["npm", "start"]
+
+# Stage 2: Create the production image
+FROM nginx:alpine
+
+WORKDIR /usr/share/nginx/html
+
+COPY dist/seinfeld-facts-docker-angular-signals /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]

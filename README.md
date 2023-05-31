@@ -30,15 +30,15 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 To create a containerized image of the app in Docker, execute the following command:
 
-`docker build -t seinfeld-facts .`
+`docker build -t seinfeld-trivia .`
 
 This command will build the Docker image with the tag "seinfeld-facts" based on the Dockerfile in the current directory.
 
 To set up and run the image on Docker, use the following command:
 
-`docker run -p 4200:4200 seinfeld-facts` 
+`docker run -p 80:80 seinfeld-trivia`
 
-This command will start a Docker container using the "seinfeld-facts" image and map port 4200 on the host to port 4200 within the container.
+This command will start a Docker container using the "seinfeld-facts" image and map port 80 on the host to port 80 within the container.
 
 ## Screenshots
 
